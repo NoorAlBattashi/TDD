@@ -18,7 +18,7 @@ public class EvenOddNumbers {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		// exercise1
-		System.out.println("exercise1");
+		System.out.println("Even/Odd Numbers:");
 		Integer[] numbers = { 2, 3, 7, 6, 9, 4, 5, 7 };
 		System.out.println(evenOdd(numbers));
 		System.out.println();
