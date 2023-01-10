@@ -14,11 +14,14 @@ public class PowerCalculation {
 	public static void main(String[] args) {
 		// exercise2
 		System.out.println("Calculate the power: ");
-		Integer base = 0;
-		Integer exponent = 0;
+		Integer base = 3;
+		Integer exponent = 2;
 
 		// display the results
-		System.out.println(power(base, exponent));
+		if(power(base, exponent) != null) {
+			System.out.println(power(base, exponent));
+		}
+		
 	}
 
 	/**
@@ -34,7 +37,8 @@ public class PowerCalculation {
 		HashMap<String, Integer> power = new HashMap<String, Integer>();
 		Integer result = base;
 
-		if (base == null && exponent == null) {
+		if (base == null || exponent == null) {
+			System.out.println("Base or Exponent is Null");
 			return null;
 		}
 		if (exponent == 0) {
