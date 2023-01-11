@@ -14,28 +14,36 @@ import org.junit.jupiter.api.Test;
 class ValidationMethodTest {
 
 	/**
-	 * Test method for {@link io.test.ValidationMethod#calculateParenthesesWithStack(java.lang.String)}.
+	 * Test method for
+	 * {@link io.test.ValidationMethod#calculateParenthesesWithStack(java.lang.String)}.
+	 * 
 	 * @exception
 	 */
 	@Test
 	@DisplayName("Take null as an arguments")
-	void testCalculateParenthesesWithStackNull(){
+	void testCalculateParenthesesWithStackNull() {
 		ValidationMethod checkMethod = new ValidationMethod();
-		
-		assertThrows(NullPointerException.class, ()->{ checkMethod.calculateParenthesesWithStack(null);});
+
+		assertThrows(NullPointerException.class, () -> {
+			checkMethod.calculateParenthesesWithStack(null);
+		});
 	}
+
 	@Test
 	@DisplayName("Take an empty string as an argument.")
-	void testCalculateParenthesesWithStackEmpty() throws Exception  {
+	void testCalculateParenthesesWithStackEmpty() throws Exception {
 		ValidationMethod checkMethod = new ValidationMethod();
 		String test = "";
 		assertEquals(false, checkMethod.calculateParenthesesWithStack(test));
 	}
+
 	@Test
 	@DisplayName("Can throw an exception")
 	void testCalculateParenthesesWithStackExeption() {
 		ValidationMethod checkMethod = new ValidationMethod();
-		assertThrows(Exception.class, ()->{ checkMethod.calculateParenthesesWithStack(null);} );
-		
+		assertThrows(Exception.class, () -> {
+			checkMethod.calculateParenthesesWithStack(null);
+		});
+
 	}
 }

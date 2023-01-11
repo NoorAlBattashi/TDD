@@ -13,7 +13,7 @@ public class ValidationMethod {
 
 	/**
 	 * @param args
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		String input = "}";
@@ -25,10 +25,10 @@ public class ValidationMethod {
 		String input6 = "[arr(10)[";
 		String input7 = "([arr{(10)}])";
 		String input8 = "([arr{(10)}])";
-		System.out.println(calculateParenthesesWithStack(null));	
-
+		System.out.println(calculateParenthesesWithStack(null));
 
 	}
+
 	/**
 	 * This method will take the strings given and calculate the parentheses using
 	 * slack if the close parentheses match open parentheses it will display valid
@@ -37,7 +37,7 @@ public class ValidationMethod {
 	 * 
 	 * @param origString
 	 */
-	public static boolean calculateParenthesesWithStack(String origString) throws Exception{
+	public static boolean calculateParenthesesWithStack(String origString) throws Exception {
 		Stack<Character> addParentheses = new Stack<Character>();
 		Stack<Character> addSquareBrackets = new Stack<Character>();
 		Stack<Character> addBraces = new Stack<Character>();
@@ -47,7 +47,7 @@ public class ValidationMethod {
 		int countCloseSquareBrackets = 0;
 		int countOpenBraces = 0;
 		int countCloseBraces = 0;
-		if(origString.isEmpty()) {
+		if (origString.isEmpty()) {
 			System.out.println("The string is empty");
 			return false;
 		}
